@@ -1,0 +1,17 @@
+- name: install go
+  apt:
+    name:
+      - golang
+- name: upload the server go binary
+  copy:
+    src: server
+    dest: server
+    owner: root
+    group: root
+    mode: 0771
+- name: run go server
+  shell: ./server &
+  register: go_cmd
+- name: print go response
+  debug:
+    msg: "{{ go_cmd.stdout }}"

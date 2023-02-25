@@ -1,0 +1,34 @@
+- name: install nginx
+  apt:
+    name:
+      - nginx
+    state: latest
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+- name: upload client to nginx
+  copy:
+    src: build
+    dest: /var/www
+    owner: root
+    group: root
+    mode: 0777
+- name: update default nginx config
+  copy:
+    src: nginx/default
+    dest: /etc/nginx/sites-available/default
+    owner: root
+    group: root
+    mode: 0644
+- name: create a symlink for the nginx default file
+  file:
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/sites-enabled/default
+    owner: root
+    group: root
+    state: link
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted

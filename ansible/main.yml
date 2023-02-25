@@ -1,0 +1,23 @@
+- hosts: all
+  become: true
+  pre_tasks:
+    - name: update package info
+      apt:
+        update_cache: true
+      changed_when: false
+
+- hosts: client
+  become: true
+  roles:
+    - client
+
+- hosts: database
+  become: true
+  roles:
+    - database
+    
+- hosts: server
+  become: true
+  roles:
+    - server
+    

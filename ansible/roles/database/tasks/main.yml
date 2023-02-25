@@ -1,0 +1,14 @@
+- name: install postgres and redis
+  apt:
+    name:
+      - postgresql
+      - postgresql-contrib
+      - redis
+- name: start postgres
+  service:
+    name: postgresql
+    state: started
+- name: start redis
+  service:
+    name: redis
+    state: started

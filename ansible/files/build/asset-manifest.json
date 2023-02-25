@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.80703c9d.chunk.css",
+    "main.js": "/static/js/main.adc0a84a.chunk.js",
+    "main.js.map": "/static/js/main.adc0a84a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.eb61b3b1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.eb61b3b1.js.map",
+    "static/js/2.b7e1ff69.chunk.js": "/static/js/2.b7e1ff69.chunk.js",
+    "static/js/2.b7e1ff69.chunk.js.map": "/static/js/2.b7e1ff69.chunk.js.map",
+    "static/js/3.d92f5050.chunk.js": "/static/js/3.d92f5050.chunk.js",
+    "static/js/3.d92f5050.chunk.js.map": "/static/js/3.d92f5050.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.80703c9d.chunk.css.map": "/static/css/main.80703c9d.chunk.css.map",
+    "static/js/2.b7e1ff69.chunk.js.LICENSE.txt": "/static/js/2.b7e1ff69.chunk.js.LICENSE.txt",
+    "static/media/3915e675f7a86ce55ddcc538388e788a1548144025.ff881392.jpeg": "/static/media/3915e675f7a86ce55ddcc538388e788a1548144025.ff881392.jpeg",
+    "static/media/beef.59bd6379.jpg": "/static/media/beef.59bd6379.jpg",
+    "static/media/burger.5319b81f.webp": "/static/media/burger.5319b81f.webp",
+    "static/media/burgerking.eb960ab9.webp": "/static/media/burgerking.eb960ab9.webp",
+    "static/media/chicken.776b544c.jpg": "/static/media/chicken.776b544c.jpg",
+    "static/media/delivery-man (1).5dc2a2a4.png": "/static/media/delivery-man (1).5dc2a2a4.png",
+    "static/media/delivery-man.46b7add3.png": "/static/media/delivery-man.46b7add3.png",
+    "static/media/dominos.926ca05a.webp": "/static/media/dominos.926ca05a.webp",
+    "static/media/fish.dca39d6d.jpg": "/static/media/fish.dca39d6d.jpg",
+    "static/media/fries.d8f663db.webp": "/static/media/fries.d8f663db.webp",
+    "static/media/hotel (1).99d1e9fd.png": "/static/media/hotel (1).99d1e9fd.png",
+    "static/media/kfc.56bc61b7.webp": "/static/media/kfc.56bc61b7.webp",
+    "static/media/mcdelivery.eac9054e.webp": "/static/media/mcdelivery.eac9054e.webp",
+    "static/media/noodles.ba9061a9.png": "/static/media/noodles.ba9061a9.png",
+    "static/media/pizza.383323cd.webp": "/static/media/pizza.383323cd.webp",
+    "static/media/rice.1888d0c6.jpg": "/static/media/rice.1888d0c6.jpg",
+    "static/media/rolls.250d6be1.webp": "/static/media/rolls.250d6be1.webp",
+    "static/media/seafood.75e57163.jpg": "/static/media/seafood.75e57163.jpg",
+    "static/media/veggies.b7f46f96.jpg": "/static/media/veggies.b7f46f96.jpg",
+    "static/media/whiskey (1).5c5bc390.png": "/static/media/whiskey (1).5c5bc390.png",
+    "static/media/whiskey.b784ec4a.png": "/static/media/whiskey.b784ec4a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb61b3b1.js",
+    "static/js/2.b7e1ff69.chunk.js",
+    "static/css/main.80703c9d.chunk.css",
+    "static/js/main.adc0a84a.chunk.js"
+  ]
+}

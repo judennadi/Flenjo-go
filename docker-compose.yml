@@ -1,0 +1,33 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    image: judennadi/flenjo-client
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+
+  server:
+    build: ./server
+    image: judennadi/flenjo-server
+    # deploy:
+    #   replicas: 2
+    env_file:
+      - ./server/.env
+    depends_on:
+      - postgresql
+      - redis
+
+  redis:
+    image: redis
+  
+  postgresql:
+    image: postgres:alpine 
+    env_file:
+      - ./server/.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

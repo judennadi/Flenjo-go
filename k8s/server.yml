@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+  labels:
+    app: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      name: server
+      labels:
+        app: server
+    spec:
+      containers:
+        - name: server
+          image: judennadi/flenjo-server
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: env
+                  key: DATABASE_URL
+            - name: YELP_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: env
+                  key: YELP_API_KEY
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: env
+                  key: JWT_SECRET
+            - name: JWT_EXPIRE
+              valueFrom:
+                secretKeyRef:
+                  name: env
+                  key: JWT_EXPIRE
+            - name: MAX_AGE
+              valueFrom:
+                secretKeyRef:
+                  name: env
+                  key: MAX_AGE
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: server
+spec:
+  selector:
+    app: server
+  ports:
+    - port: 5000
+      targetPort: 5000
