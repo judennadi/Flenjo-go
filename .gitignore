@@ -1,7 +1,7 @@
 .env
 node_modules
 secret.yml
-*.tfvars
+# *.tfvars
 .terraform/
 terraform/.terraform/
 **/.terraform/

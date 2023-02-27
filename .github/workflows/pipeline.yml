@@ -41,6 +41,7 @@ jobs:
           go test ./...
 
   deploy-client:
+    needs: test
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
