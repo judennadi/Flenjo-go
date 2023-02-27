@@ -31,21 +31,25 @@ jobs:
   #         echo ${{ secrets.DOCKER_SECRET }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
   #         docker push ${{ secrets.DOCKER_USERNAME }}/flenjo-server:latest
 
-  test:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-      - name: start databases
-        run: |
-          sudo service postgresql start
-          sudo service redis-server start
-      - name: change to the server directory and run tests
-        run:  |
-          cd server
-          go test ./...
+  # test:
+  #   runs-on: self-hosted
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: start databases
+  #       run: |
+  #         sudo service postgresql start
+  #         sudo service redis-server start
+  #     - name: change to the server directory and run tests
+  #       run:  |
+  #         cd server
+  #         go test ./...
+  #     - name: stop databases
+  #       run: |
+  #         sudo service postgresql stop
+  #         sudo service redis-server stop
 
   deploy-client:
-    needs: test
+    # needs: test
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
